@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: customer-service
+  web:
+    error:
+      include-binding-errors: always
+      include-message: always
+  mongodb:
+    uri: "mongodb+srv://dilshankm:duk7aduk7a@customers.hrirki9.mongodb.net/customers?retryWrites=true&w=majority&authSource=admin&appName=customers"
+
+server:
+  port: 8080
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+  endpoint:
+    health:
+      show-details: always
+  health:
+    mongodb:
+      enabled: false
